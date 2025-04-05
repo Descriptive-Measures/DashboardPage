@@ -9,6 +9,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - aws codeartifact login --tool npm --repository npm-store --domain descriptive-measures --domain-owner 277707103435 --region us-west-2
         - npx ng version
     build:
       commands:
