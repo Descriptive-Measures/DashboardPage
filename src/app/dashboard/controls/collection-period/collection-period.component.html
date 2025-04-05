@@ -1,0 +1,6 @@
+<div class="row">
+    <label for="collectionPeriodChangeControl" class="form-label">Collection Period (Days)</label>
+</div>
+<div class="row">
+    <div class="col-md-8"><input type="range" class="form-range" min="0" max = "180" [formControl]="collectionPeriodChangeControl"></div><div class="col-md-4">{{collectionPeriodChangeControl.value}} Days</div>
+</div>

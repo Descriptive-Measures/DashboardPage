@@ -1,0 +1,39 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox-content p-xl">
+        <div class="row">
+          <div class="text-center">
+            <h2>Income Statement</h2>
+            <h3><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.year}}</div></h3>
+            <h4>Represented in <div style="display: inline-block;" *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.scale | currency}}</div>'s</h4>
+          </div>
+
+          <div class="table-responsive m-t">
+            <table class="table statement-table">
+              <thead>
+                <tr><th></th><th colspan = 2><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.year}}</div></th></tr>
+              </thead>
+              <tbody>
+                <tr><td><div>Sales</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.sales | currency}}</div></td></tr>
+                <tr><td><div>Cost of Goods Sold</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.cost_of_goods | number: '1.2-2'}}</div></td></tr>
+                <tr class="statement-table-total"><td><div>Gross Profit</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.gross_profit | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Depreciation</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.depreciation_expense | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Other Operating Expenses, Gains, Losses</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.other_operating_expenses_gain_loss | number: '1.2-2'}}</div></td></tr>
+                <tr class="statement-table-total"><td><div>Operating Income</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.operating_income | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Interest Expense</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.interest_expense | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Misc Revenue/Expense</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.misc_revenue_expense_gain_loss | number: '1.2-2'}}</div></td></tr>
+                <tr class="statement-table-total"><td><div>Pre-Tax Income</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.pre_tax_income | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Income Tax Expense</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.income_tax_expense | number: '1.2-2'}}</div></td></tr>
+                <tr class="statement-table-total"><td><div>Income from Continuing Operations</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.income_from_continuing_operations | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Income From Discontinued Operations</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.income_from_discontinued_operations | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Extraordinary Items</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.extraordinary_items | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Cumulative Effect of Accounting Changes</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.cumulative_effect_of_accounting_changes | number: '1.2-2'}}</div></td></tr>
+                <tr class="statement-table-total"><td><div>Net Income</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.net_income | number: '1.2-2'}}</div></td></tr>
+                <tr><td><div>Unrealized Gains/Losses not in Net Income</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.unrealized_gains_losses_not_in_net_income | number: '1.2-2'}}</div></td></tr>
+                <tr class="statement-table-total"><td><div>Comprehensive Income</div></td><td><div *ngIf="incomeStatement$ | async as incomeStatement"> {{ incomeStatement.comprehensive_income | currency}}</div></td></tr>
+              </tbody>
+            </table>
+      </div>
+  </div>
+</div>

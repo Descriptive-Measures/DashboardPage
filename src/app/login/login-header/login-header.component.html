@@ -1,0 +1,19 @@
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md navbar-scroll" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" routerLink="/">Descriptive Measures</a>
+            <div class="navbar-header page-scroll">
+                <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                    <fa-icon [icon]="faBars"/>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar" [ngbCollapse]="isMenuCollapsed">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="nav-link page-scroll" routerLink="/" >Home</a></li>
+
+                    <li><a class="nav-link active">Client Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

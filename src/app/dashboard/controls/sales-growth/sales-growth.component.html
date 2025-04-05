@@ -1,0 +1,6 @@
+<div class="row">
+    <div class="col-md-12"><label for="salesGrowthControl" class="form-label">Sales Growth</label></div>
+</div>
+<div class="row">
+    <div class="col-md-10"><input type="range" class="form-range" min="0" max = "100" [formControl]="salesGrowthControl"></div><div class="col-md-2">{{salesGrowthControl.value}}%</div>
+</div>

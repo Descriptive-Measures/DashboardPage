@@ -1,0 +1,6 @@
+<div class="row">
+    <label for="paymentPeriodChangeControl" class="form-label">Payable Period (Days)</label>
+</div>
+<div class="row">
+    <div class="col-md-8"><input type="range" class="form-range" min="0" max = "180" [formControl]="paymentPeriodChangeControl"></div><div class="col-md-4">{{paymentPeriodChangeControl.value}} Days</div>
+</div>

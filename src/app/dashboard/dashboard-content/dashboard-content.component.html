@@ -1,0 +1,59 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col col-lg-1"></div>
+      <div class="col col-lg-10">
+        <div class="ibox-content p-xl">
+            <div class="row">
+                <div class="text-center">
+                    <h1><div *ngIf="company$ | async as company"> {{ company.name }}</div></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-1"></div>
+    </div>
+</div>
+<!-- Guages & Controls -->
+<div class="wrapper wrapper-content animated fadeInRight"></div>
+    <div class="row">
+        <div class="col col-lg-12">
+            <div class="ibox-content p-xl">
+                <div class="row">
+                    <div class="col col-md-3">
+                        <app-dashboard-content-left-gauges/>
+                    </div>
+                    <div class="col col-md-6">
+                        <app-dashboard-content-central-gauges/>
+                    </div>
+                    <div class="col col-md-3">
+                        <app-dashboard-content-right-gauges/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tabular Data -->
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col col-lg-3">
+            <div class="ibox-content p-xl">
+                <div class="row">
+                    <div class="col col-md-12">
+                        <app-dashboard-content-left-numbers/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6">
+            <div class="ibox-content p-xl"></div>
+        </div>
+        <div class="col col-lg-3">
+            <div class="ibox-content p-xl"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Financial Statements -->
+
+<app-statement-block/>

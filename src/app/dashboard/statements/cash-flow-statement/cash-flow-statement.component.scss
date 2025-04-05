@@ -1,0 +1,21 @@
+.statement-table tbody > tr > td:nth-child(3) {
+    text-align: right;
+}
+  
+.statement-table thead > tr > th {
+    text-align: center;
+}
+
+.statement-table-total-row {
+    font-weight: bold;
+}
+
+.statement-table > tbody > tr > td {
+    border: 0 none;
+}
+  
+.statement-table-total {
+    border-top: 1px solid #DDDDDD;
+    text-align: right;
+    width: 15%;
+}

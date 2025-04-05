@@ -1,0 +1,57 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox-content p-xl">
+        <div class="row">
+          <div class="text-center">
+            <h2>Cash Flow Statement</h2>
+            <h3><div *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.year}}</div></h3>
+            <h4>Represented in <div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.scale | currency}}</div>'s</h4>
+          </div>
+          <div class="table-responsive m-t">
+            <table class="table statement-table">
+              <thead>
+                <tr><th></th><th></th><th colspan = 2><div *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.year}}</div></th></tr>
+              </thead>Cash 
+              <tbody>
+                <tr><td colspan = 2>Beginning Cash Balance</td><td></td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.beginning_cash| currency}}</div></td></tr>
+                <tr><td colspan = 4>Cash Flows from Operating Activities</td></tr>
+                <tr><td></td><td>Net Income</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.net_income_from_continuing_operations| currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Depreciation</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.depreciation | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total"><td colspan = 2>Operating Profit</td><td></td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.operating_profit | currency}}</div></td></tr>
+
+                <tr><td></td><td>Change in Accounts Recievable</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_accounts_recievable | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Inventory</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_inventory | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Prepaid Expenses</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_prepaid_expenses | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Accounts Payable</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_accounts_payable | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Taxes Payable</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_taxes_payable | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Accrued Liabilities</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_accrued_liabilities | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Deferred Income Tax Liability</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_deferred_income_tax_liability | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total"><td colspan = 2>Net Cash Change by Operating Activities</td><td></td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.operating_cash_flow | currency}}</div></td></tr>
+
+                <tr><td colspan = 4>Cash Flows from Investing Activities</td></tr>
+                <tr><td></td><td>Change in Investment Securities</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_changes_investment_securities | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Investments</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_changes_in_investments | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Property, Plant & Equipment</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_changes_in_property_plant_and_equipment | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total"><td colspan = 2>Net Cash Change by Investing Activities</td><td></td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.investing_cash_flow | currency}}</div></td></tr>
+
+                <tr><td colspan = 4>Cash Flows from Financing Activities</td></tr>
+                <tr><td></td><td>Change in Short Term Loans Payable</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_short_term_loans_payable | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Current Portion of Long Term Debt</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_current_portion_of_long_term_debt | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Long Term Debt</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_long_term_debt | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Capital Lease Obligation</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_capital_lease_obligation | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Cash from Stock Sales</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_stock_sales | currency}}</div></td><td></td></tr>
+                <tr><td></td><td>Change in Accumulated Other Comprehensive Income</td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.cash_from_change_in_accum_other_comprehensive_income | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total"><td colspan = 2>Net Cash Change by Financing Activities</td><td></td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.financing_cash_flow | currency}}</div></td></tr>
+
+                <tr class="statement-table-total"><td colspan = 2>Net Change in Cash </td><td></td><td><div *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.net_change_in_cash | currency}}</div></td></tr>
+
+                <tr class="statement-table-total"><td colspan = 2>Ending Cash Balance</td><td></td><td><div style="display: inline-block;" *ngIf="cashFlowStatement$ | async as cashFlowStatement"> {{ cashFlowStatement.ending_cash | currency}}</div></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

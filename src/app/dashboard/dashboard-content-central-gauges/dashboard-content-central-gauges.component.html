@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-4">
+        <app-gauge-cash-flow [cashFlowStatement$] = "forecastedCashFlowStatement$"/>
+    </div>
+    <div class="col-md-4">
+        <app-gauge-sales [incomeStatement$] = "forecastedIncomeStatement$"/>
+    </div>
+    <div class="col-md-4">
+        <app-gauge-net-income [incomeStatement$] = "forecastedIncomeStatement$"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <app-cash-adjustments/>
+    </div>
+    <div class="col-md-4">
+        <app-sales-adjustments/>
+    </div>
+    <div class="col-md-4">
+        <app-expense-adjustments/>
+    </div>
+</div>

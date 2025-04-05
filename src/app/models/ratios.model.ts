@@ -1,0 +1,25 @@
+export interface Ratios {
+    current_ratio?: number | undefined;
+    cash_ratio?: number | undefined;
+    quick_ratio?: number | undefined;
+    debt_ratio?: number | undefined;
+    debt_to_equity?: number | undefined;
+    ebit?: number | undefined;
+    ebitda?: number | undefined;
+    times_interest_earned?: number | undefined;
+    return_on_assets?: number | undefined;
+    return_on_equity?: number | undefined;
+    return_on_sales?: number | undefined;
+    asset_turnover?: number | undefined;
+    fixed_asset_turnover?: number | undefined;
+    assets_to_equity?: number | undefined;
+    average_daily_cost_of_goods?: number | undefined;
+    days_in_inventory?: number | undefined;
+    profitability?: number | undefined;
+    leverage_ratio?: number | undefined;
+    cogs_percentage?: number | undefined;
+    gross_profit_percentage?: number | undefined;
+    operating_expenses_vs_sales?: number | undefined;
+    days_purchases_in_payables?: number | undefined;
+    average_collection_period?: number | undefined;
+}

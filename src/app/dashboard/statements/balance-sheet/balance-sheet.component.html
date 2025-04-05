@@ -1,0 +1,72 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox-content p-xl">
+        <div class="row">
+          <div class="text-center">
+            <h2>Balance Sheet</h2>
+            <h3><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.year}}</div></h3>
+            <h4>Represented in <div style="display: inline-block;" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.scale | currency}}</div>'s</h4>
+          </div>
+          <div class="table-responsive m-t">
+            <table class="table statement-table">
+              <thead>
+                <tr><th></th><th></th><th colspan = 2><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.year}}</div></th></tr>
+              </thead>
+              <tbody>
+                <tr><td><div><h4>Assets</h4></div></td><td colspan="5"></td></tr>
+                <tr><td><div><h5>Current Assets</h5></div></td><td colspan="5"></td></tr>
+                <tr><td><div>Cash</div></td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.cash | currency}}</div></td><td></td></tr>
+                <tr><td>Accounts Recievable</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.accounts_recievable | currency}}</div></td><td></td></tr>
+                <tr><td>Inventory</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.inventory | currency}}</div></td><td></td></tr>
+                <tr><td>Prepaid Expenses</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.prepaid_expenses | currency}}</div></td><td></td></tr>
+                <tr><td>Investment Securities</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.investment_securities | currency}}</div></td><td></td></tr>
+                <tr><td>Other Current Assets</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.other_current_assets | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total-row"><td></td><td>Total Current Assets</td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.current_assets | currency}}</div></td></tr>
+                <tr><td colspan = 5><h5>Long-Term Assets</h5></td></tr>
+                <tr><td>Investment</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.investments | currency}}</div></td><td></td></tr>
+                <tr><td>Property, Plant, & Equipment</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.property_plant_equipment | currency}}</div></td><td></td></tr>
+                <tr><td>less Accumulated Depreciation</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.accumulated_depreciation | currency}}</div></td><td></td></tr>
+                <tr><td>Intangible Assets </td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.intangible_assets | currency}}</div></td><td></td></tr>
+                <tr><td>Other Assets</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.other_assets | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total-row"><td></td><td>Total Long-Term Assets</td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.long_term_assets | currency}}</div></td></tr>  
+                <tr class="statement-table-total-row"><td></td><td>Total Assets</td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.total_assets | currency}}</div></td></tr> 
+                <tr><td colspan = 5><h4>Liabilities</h4></td></tr>
+                <tr><td colspan = 5><h5>Current Liabilities</h5></td></tr>
+                <tr><td>Accounts Payable</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.accounts_payable | currency}}</div></td><td></td></tr>
+                <tr><td>Accrued Liabilities</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.accrued_liabilities | currency}}</div></td><td></td></tr>
+                <tr><td>Short-term Loans Payable</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.short_term_loans_payable | currency}}</div></td><td></td></tr>
+                <tr><td>Current Portion of Long-Term Debt</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.current_portion_long_term_debt | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total-row"><td></td><td><div>Total Current Liabilities</div></td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.current_liabilities | currency}}</div></td></tr>  
+                <tr><td colspan = 5><h5>Long-Term Liabilities</h5></td></tr>
+                <tr><td>Long-Term Debt</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.long_term_debt | currency}}</div></td><td></td></tr>
+                <tr><td>Capital Lease Obligations</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.capital_lease_obligations | currency}}</div></td><td></td></tr>
+                <tr><td>Deferred Income Tax Liability</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.deferred_income_tax | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total-row"><td></td><td>Total Long-Term Liabilities</td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.long_term_liabilities | currency}}</div></td></tr>  
+                <tr class="statement-table-total-row"><td></td><td>Total Liabilities</td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.total_liabilities | currency}}</div></td></tr> 
+                <tr><td colspan = 5><h4>Stockholders' Equity</h4></td></tr>
+                <tr><td>Preferred Stock</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.preferred_stock | currency}}</div></td><td></td></tr>
+                <tr><td>Common Stock, par value</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.common_stock_par_value | currency}}</div></td><td></td></tr>
+                <tr><td>Additional Paid in Capital</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.additional_paid_in_capital | currency}}</div></td><td></td></tr>
+                <tr><td>Retained Earnings</td><td></td><td><div *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.retained_earnings | currency}}</div></td><td></td></tr>
+                <tr class="statement-table-total-row"><td></td><td>Total Stockholders' Equity</td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.stockholders_equity | currency}}</div></td></tr> 
+                <tr class="statement-table-total-row"><td></td><td>Total Liability and Equity</td><td></td><td><div class="statement-table-total" *ngIf="balanceSheet$ | async as balanceSheet"> {{ balanceSheet.total_liability_and_equity | currency}}</div></td></tr> 
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<table>
+ </table>
+

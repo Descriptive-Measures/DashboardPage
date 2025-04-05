@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col col-md-2"><app-gauge-current-assets [balanceSheet$] = "forecastedBalanceSheet$" /></div>
+    <div class="col col-md-2"><app-gauge-current-liabilities [balanceSheet$] = "forecastedBalanceSheet$" /></div>
+</div>
+<div class="row">
+    <div class="col col-md-6"><app-gauge-current-ratio [ratios$]="forecastedRatios$" /></div>
+</div>
+<div class="row">
+    <div class="col col-md-6"><app-gauge-return-on-equity [ratios$]="forecastedRatios$" /></div>
+</div>

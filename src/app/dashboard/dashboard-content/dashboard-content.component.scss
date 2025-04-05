@@ -1,0 +1,25 @@
+.settingArea {
+    display: inline-block;
+    text-align: center;
+}
+
+.assumptionArea {
+    display: inline-block;
+    text-align: left;
+}
+
+.ratioArea {
+    display: inline-block;
+    border: 5px outset red;
+    background-color: lightblue;
+    text-align: left;
+}
+
+.gauge-table tbody > tr > td:nth-child(2) {
+    text-align: right;
+}
+
+.gauge-table > tbody > tr > td {
+    border: 0 none;
+}
+  

@@ -1,0 +1,47 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox-content p-xl">
+        <div class="row">
+          <div class="text-center">
+            <h2>Key Ratios</h2>
+<!--        <h3><div *ngIf="ratios$ | async as ratios"> {{ ratios.year}}</div></h3> -->
+          </div>
+
+          <div class="table-responsive m-t">
+            <table class="table ratio-table">
+              <thead>
+                <tr><th>Ratio</th><th>Value</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Current Ratio</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.current_ratio | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Cash Ratio</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.cash_ratio | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Quick Ratio</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.quick_ratio | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Debt Ratio</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.debt_ratio | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Debt to Equity</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.debt_to_equity | number: '1.2-2'}}</div></td></tr>
+                <tr><td>EBIT</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.ebit | number: '1.2-2'}}</div></td></tr>
+                <tr><td>EBITDA</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.ebitda | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Times Interest Earned</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.times_interest_earned | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Return on Assets</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.return_on_assets | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Return on Equity</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.return_on_equity | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Return on Sales</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.return_on_sales | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Asset Turnover</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.asset_turnover | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Fixed Asset Turnover</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.fixed_asset_turnover | number: '1.2-2'}}</div></td></tr>  
+                <tr><td>Assets to Equity</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.assets_to_equity | number: '1.2-2'}}</div></td></tr> 
+                <tr><td>Average Daily Cost of Goods</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.average_daily_cost_of_goods | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Days in Inventory</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.days_in_inventory | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Profitability</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.profitability | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Levrage Ratio</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.leverage_ratio | number: '1.2-2'}}</div></td></tr>
+                <tr><td>COGS Percentage</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.cogs_percentage | number: '1.2-2'}}</div></td></tr>  
+                <tr><td>Gross Profit Percentage</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.gross_profit_percentage | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Operating Expenses vs Sales</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.operating_expenses_vs_sales | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Days Purchases in Payables</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.days_purchases_in_payables | number: '1.2-2'}}</div></td></tr>
+                <tr><td>Average Collection Period</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.average_collection_period | number: '1.2-2'}}</div></td></tr>  
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row">
+    <!-- Collection/Payment Periods -->
+    <div class="col col-md-6"><app-gauge-receivable-days [ratios$] = "forecastedRatios$"/></div>
+    <div class="col col-md-6"><app-gauge-payable-days [ratios$] = "forecastedRatios$"/></div>
+</div>
+<div class="row">
+    <!-- Days in Inventory-->
+    <div class="col col-md-6"><app-gauge-inventory-days [ratios$] = "forecastedRatios$"/></div>
+    <!-- Cash Level-->
+    <div class="col col-md-6"><app-gauge-cash-level [cashFlowStatement$] = "forecastedCashFlowStatement$"/></div>
+</div>

@@ -1,0 +1,54 @@
+/*
+ *
+ *   INSPINIA - Responsive Admin Theme
+ *   version 2.9.4
+ *
+*/
+
+// Variables, Mixins
+@import "template-style/variables";
+@import "template-style/mixins";
+
+// INSPINIA Theme Elements
+@import "template-style/typography";
+@import "template-style/navigation";
+@import "template-style/top_navigation";
+@import "template-style/buttons";
+@import "template-style/badges_labels";
+@import "template-style/elements";
+@import "template-style/sidebar";
+@import "template-style/base";
+@import "template-style/pages";
+@import "template-style/chat";
+@import "template-style/metismenu";
+@import "template-style/spinners";
+
+// RTL Support
+@import "template-style/rtl";
+
+// For demo only - config box style
+@import "template-style/theme-config";
+
+// INSPINIA Skins
+@import "template-style/skins";
+@import "template-style/md-skin";
+
+// Media query style
+@import "template-style/media";
+
+// Custom style
+// Your custom style to override template-style style
+@import "template-style/custom";
+
+// Clear layout on print mode
+@media print {
+  nav.navbar-static-side {
+    display: none;
+  }
+
+  body { overflow: visible !important; }
+
+  #page-wrapper {
+    margin: 0;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="row">
+    <!-- Actual Values-->
+    <div class="col col-md-12">
+        <h2>Operating Cash</h2>
+        <div class="table-responsive m-t">
+            <table class="table gauge-table">
+                <tbody>
+                    <tr><td>Accounts Recievable</td><td><div *ngIf="forecastedBalanceSheet$ | async as forecastedBalanceSheet"> {{ forecastedBalanceSheet.accounts_recievable | currency}}</div></td></tr>
+                    <tr class="border-bottom"><td>Average Collection Period</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.average_collection_period | number: '1.2-2'}}</div></td></tr>
+                    <tr><td>Inventory</td><td><div *ngIf="forecastedBalanceSheet$ | async as forecastedBalanceSheet"> {{ forecastedBalanceSheet.inventory | currency}}</div></td></tr>
+                    <tr class="border-bottom"><td>Days Sales in Inventory</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.days_in_inventory | number: '1.2-2'}}</div></td></tr>   
+                    <tr><td>Accounts Payable</td><td><div *ngIf="forecastedBalanceSheet$ | async as forecastedBalanceSheet"> {{ forecastedBalanceSheet.accounts_payable | currency}}</div></td></tr>
+                    <tr class="border-bottom"><td>Payment Period</td><td><div *ngIf="ratios$ | async as ratios"> {{ ratios.days_purchases_in_payables | number: '1.2-2'}}</div></td></tr>
+                    <tr><td>Beginning Cash</td><td><div *ngIf="forecastedCashFlowStatement$ | async as forecastedCashFlowStatement"> {{ forecastedCashFlowStatement.beginning_cash | currency}}</div></td></tr>
+                    <tr class="border-bottom"><td>Ending Cash</td><td><div *ngIf="forecastedCashFlowStatement$ | async as forecastedCashFlowStatement"> {{ forecastedCashFlowStatement.ending_cash | currency}}</div></td></tr>
+                    <tr><td>Change in Cash</td><td><div *ngIf="forecastedCashFlowStatement$ | async as forecastedCashFlowStatement"> {{ forecastedCashFlowStatement.net_change_in_cash | currency}}</div></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

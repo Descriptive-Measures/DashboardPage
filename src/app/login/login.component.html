@@ -1,0 +1,28 @@
+<body class="gray-bg">
+    <app-login-header/>
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">Login</h1>
+
+            </div>
+            <h3>Business Driver Dashboard</h3>
+            <p>
+                
+            </p>
+            <p>Login in using your Descriptive Measures login.</p>
+            <form class="m-t" role="form" [formGroup] = "form" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input type="email" class="form-control" formControlName="username" placeholder="Email Address" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" formControlName="password"placeholder="Password" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+            </form>
+            <p class="m-t"> <small><strong>Copyright</strong> Descriptive Measures &copy; 2025</small> </p>
+        </div>
+    </div>
+</body>

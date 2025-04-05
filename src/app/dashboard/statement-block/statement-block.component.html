@@ -1,0 +1,85 @@
+
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="tabs-container">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li><a class="nav-link" [class.active]="active_statements==='notes'" (click)="active_statements='notes'" data-toggle="tab">Notes</a></li>
+                    <li><a class="nav-link" [class.active]="active_statements==='income statement'" (click)="active_statements='income statement'" data-toggle="tab">Income Statements</a></li>
+                    <li><a class="nav-link" [class.active]="active_statements==='balance sheet'" (click)="active_statements='balance sheet'" data-toggle="tab">Balance Sheets</a></li>
+                    <li><a class="nav-link" [class.active]="active_statements==='cash flow statement'" (click)="active_statements='cash flow statement'" data-toggle="tab">Cash Flow Statements</a></li>
+                    <li><a class="nav-link" [class.active]="active_statements==='ratios'" (click)="active_statements='ratios'" data-toggle="tab">Key Ratios</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="notes-tab" class="tab-pane" [class.active]="active_statements==='notes'">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col col-md-12">
+                                    <p>Select a statement tab to view the forecsted financial statement.</p>
+                                    <p>Statements are calculated using the settings above.  
+                                       There are other economic factors that are not considred in the forecast.  
+                                       Please consult with your Business Coach for more information.
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="tab-content">
+                    <div role="tabpanel" id="income-statement-tab" class="tab-pane" [class.active]="active_statements==='income statement'">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <app-income-statement [incomeStatement$] = "incomeStatement$"/>
+                                </div>
+                                <div class="col col-md-6">
+                                    <app-income-statement [incomeStatement$] = "forecastedIncomeStatement$"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="balance-sheet-tab" class="tab-pane" [class.active]="active_statements==='balance sheet'">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <app-balance-sheet [balanceSheet$] = "balanceSheet$"/>
+                                </div>
+                                <div class="col col-md-6">
+                                    <app-balance-sheet [balanceSheet$] = "forecastedBalanceSheet$"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="cash-flow-statement-tab" class="tab-pane" [class.active]="active_statements==='cash flow statement'">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col col-md-6">
+                                    <!-- Nothing Here-->
+                                </div>
+                                <div class="col col-md-6">
+                                    <app-cash-flow-statement [cashFlowStatement$] = "forecastedCashFlowStatement$"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="ratios-tab" class="tab-pane" [class.active]="active_statements==='ratios'">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col col-md-3">
+                                    <app-ratios [ratios$]="ratios$"/>
+                                </div>
+                                <div class="col col-md-3">
+                                </div>
+                                <div class="col col-md-3">
+                                    <app-ratios [ratios$]="forecastedRatios$"/>
+                                </div>
+                                <div class="col col-md-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
